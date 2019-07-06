@@ -9,8 +9,11 @@ The metrics are calculated using multiple reference points placed by the user on
 
 The list of extracted metrics is:
 • Rostrum.X: The distance in X between the rostrum and the bottom-left corner of the full picture (in % of total width (X) of the photo).
+
 • Rostrum.Y: The distance in Y between the rostrum and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
+
 • Fluke.X: The distance in X between the notch of the tail fluke and the bottom-left corner of the full picture (in % of total width (X) of the photo).
+
 • Fluke.Y: The distance in Y between the notch of the tail fluke and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
 • Total.length.pix: Total length of the whale (in pixels).
 • Length.to.blowhole.pix: The length between the rostrum and the blowhole of the whale (in pixels).
