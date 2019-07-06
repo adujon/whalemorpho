@@ -1,4 +1,4 @@
-# whalemorpho
+# whale morphometrics
 This R function was used to extract morphometrics from humpack whale pictures collected using unmanned aerial vehicles. The resuts where published in Ecosphere:
 
 Christiansen, F., Dujon, A.M., Sprogis, K.R., Arnould, J.P.Y., and Bejder, L. 2016. Noninvasive unmanned aerial vehicle provides estimates of the energetic cost of reproduction in humpback whales. Ecosphere 7(10): e01468.
@@ -7,7 +7,7 @@ Christiansen, F., Dujon, A.M., Sprogis, K.R., Arnould, J.P.Y., and Bejder, L. 20
 
 The metrics are calculated using multiple reference points placed by the user on the photograph of the body of the whale (Fig. S1).
 
-The list of extracted metrics is:
+#The list of extracted metrics is:
 • <b>Rostrum.X</b>: The distance in X between the rostrum and the bottom-left corner of the full picture (in % of total width (X) of the photo).
 
 • <b>Rostrum.Y</b>: The distance in Y between the rostrum and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
@@ -34,14 +34,15 @@ The list of extracted metrics is:
 
 • <b>Width.5.proc.pix to Width.95.proc.pix</b>: Width measurements of the body of the whale (in pixels).
 
-<b>Usage</b>
+# Usage 
 whale.morpho(myimage, tiff)
 
-<b>Arguments</b>
+# Arguments 
 myimage: Path to the picture of the whale. The picture must be JPEG or TIFF format.
 tiff: Set to TRUE if the picture is a TIFF. Set to FALSE if the picture is a JPEG.
 
-<b>Example</b>
+# Example
+<code>
 rm(list=ls()) # clear all the files in memory
 #load the packages required to run the whale.morpho function
 library(jpeg)
@@ -54,8 +55,10 @@ res
 #Run the function for a TIFF picture
 res <- whale.morpho(myimage = "C:/Whales/whale_picture.tif", TIFF = TRUE)
 res
+</code>
 
-#NOTE: When running your script, make sure not to run anything past the code line
+# NOTE 
+When running your script, make sure not to run anything past the code line
 launching the whale.morpho function, otherwise the function will crash. First run your script
 up to the line calling the whale.morpho function, analyze your picture, and after that run the
 end of your script.
