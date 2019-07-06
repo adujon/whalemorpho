@@ -15,17 +15,26 @@ The list of extracted metrics is:
 • Fluke.X: The distance in X between the notch of the tail fluke and the bottom-left corner of the full picture (in % of total width (X) of the photo).
 
 • Fluke.Y: The distance in Y between the notch of the tail fluke and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
+
 • Total.length.pix: Total length of the whale (in pixels).
+
 • Length.to.blowhole.pix: The length between the rostrum and the blowhole of the whale (in pixels).
+
 • Length.to.start.of.dorsal.fin.pix: The length between the rostrum and the beginning of the dorsal fin of the whale (in pixels).
+
 • Length.to.end.of.dorsal.fin.pix: The length between the rostrum and the end of the dorsal fin of the whale (in pixels).
+
 • Length.to.start.of.fluke.pix: The length between the rostrum and the start of the tail of the whale (in pixels).
+
 • Length.to.eyes.pix: The length between the rostrum and the line of the eyes of the whale (in pixels).
+
 • Width.at.eyes.pix: The width between the eyes of the whale (in pixels).
+
 • Width.fluke.pix: The length between the two extremities of the tail fluke (in pixels).
+
 • Width.5.proc.pix to Width.95.proc.pix: Width measurements of the body of the whale (in pixels).
 
-Usage
+<b>Usage</b>
 whale.morpho(myimage, tiff)
 
 Arguments
