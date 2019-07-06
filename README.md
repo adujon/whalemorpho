@@ -3,47 +3,47 @@ This R function was used to extract morphometrics from humpack whale pictures co
 
 Christiansen, F., Dujon, A.M., Sprogis, K.R., Arnould, J.P.Y., and Bejder, L. 2016. Noninvasive unmanned aerial vehicle provides estimates of the energetic cost of reproduction in humpback whales. Ecosphere 7(10): e01468.
 
-The publication is available for free at: https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.1468
+<b>The publication is available for free at</b>: https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.1468
 
 The metrics are calculated using multiple reference points placed by the user on the photograph of the body of the whale (Fig. S1).
 
 The list of extracted metrics is:
-• Rostrum.X: The distance in X between the rostrum and the bottom-left corner of the full picture (in % of total width (X) of the photo).
+• <b>Rostrum.X</b>: The distance in X between the rostrum and the bottom-left corner of the full picture (in % of total width (X) of the photo).
 
-• Rostrum.Y: The distance in Y between the rostrum and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
+• <b>Rostrum.Y</b>: The distance in Y between the rostrum and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
 
-• Fluke.X: The distance in X between the notch of the tail fluke and the bottom-left corner of the full picture (in % of total width (X) of the photo).
+• <b>Fluke.X</b>: The distance in X between the notch of the tail fluke and the bottom-left corner of the full picture (in % of total width (X) of the photo).
 
-• Fluke.Y: The distance in Y between the notch of the tail fluke and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
+• <b>Fluke.Y</b>: The distance in Y between the notch of the tail fluke and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
 
-• Total.length.pix: Total length of the whale (in pixels).
+• <b>Total.length.pix</b>: Total length of the whale (in pixels).
 
-• Length.to.blowhole.pix: The length between the rostrum and the blowhole of the whale (in pixels).
+• <b>Length.to.blowhole.pix</b>: The length between the rostrum and the blowhole of the whale (in pixels).
 
-• Length.to.start.of.dorsal.fin.pix: The length between the rostrum and the beginning of the dorsal fin of the whale (in pixels).
+• <b>Length.to.start.of.dorsal.fin.pix</b>: The length between the rostrum and the beginning of the dorsal fin of the whale (in pixels).
 
-• Length.to.end.of.dorsal.fin.pix: The length between the rostrum and the end of the dorsal fin of the whale (in pixels).
+• <b>Length.to.end.of.dorsal.fin.pix</b>: The length between the rostrum and the end of the dorsal fin of the whale (in pixels).
 
-• Length.to.start.of.fluke.pix: The length between the rostrum and the start of the tail of the whale (in pixels).
+• <b>Length.to.start.of.fluke.pix</b>: The length between the rostrum and the start of the tail of the whale (in pixels).
 
-• Length.to.eyes.pix: The length between the rostrum and the line of the eyes of the whale (in pixels).
+• <b>Length.to.eyes.pix</b>: The length between the rostrum and the line of the eyes of the whale (in pixels).
 
-• Width.at.eyes.pix: The width between the eyes of the whale (in pixels).
+• <b>Width.at.eyes.pix</b>: The width between the eyes of the whale (in pixels).
 
-• Width.fluke.pix: The length between the two extremities of the tail fluke (in pixels).
+• <b>Width.fluke.pix</b>: The length between the two extremities of the tail fluke (in pixels).
 
-• Width.5.proc.pix to Width.95.proc.pix: Width measurements of the body of the whale (in pixels).
+• <b>Width.5.proc.pix to Width.95.proc.pix</b>: Width measurements of the body of the whale (in pixels).
 
 <b>Usage</b>
 whale.morpho(myimage, tiff)
 
-Arguments
+<b>Arguments</b>
 myimage: Path to the picture of the whale. The picture must be JPEG or TIFF format.
 tiff: Set to TRUE if the picture is a TIFF. Set to FALSE if the picture is a JPEG.
 
-Example
+<b>Example</b>
 rm(list=ls()) # clear all the files in memory
-### load the packages required to run the whale.morpho function
+#load the packages required to run the whale.morpho function
 library(jpeg)
 library(tiff)
 library(raster)
