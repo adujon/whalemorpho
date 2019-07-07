@@ -1,5 +1,5 @@
 # Whale morphometrics using R
-This R function was used to extract morphometrics from humpack whale pictures collected using unmanned aerial vehicles. The resuts where published in Ecosphere:
+This R function was used to extract morphometrics from humpack whale pictures collected using unmanned aerial vehicles. The resuts are published in Ecosphere:
 
 Christiansen, F., Dujon, A.M., Sprogis, K.R., Arnould, J.P.Y., and Bejder, L. 2016. Noninvasive unmanned aerial vehicle provides estimates of the energetic cost of reproduction in humpback whales. Ecosphere 7(10): e01468.
 
