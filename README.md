@@ -1,4 +1,4 @@
-# whale morphometrics
+# Whale morphometrics
 This R function was used to extract morphometrics from humpack whale pictures collected using unmanned aerial vehicles. The resuts where published in Ecosphere:
 
 Christiansen, F., Dujon, A.M., Sprogis, K.R., Arnould, J.P.Y., and Bejder, L. 2016. Noninvasive unmanned aerial vehicle provides estimates of the energetic cost of reproduction in humpback whales. Ecosphere 7(10): e01468.
@@ -7,7 +7,7 @@ Christiansen, F., Dujon, A.M., Sprogis, K.R., Arnould, J.P.Y., and Bejder, L. 20
 
 The metrics are calculated using multiple reference points placed by the user on the photograph of the body of the whale (Fig. S1).
 
-#The list of extracted metrics is:<br>
+# The list of extracted metrics is:<br>
 
 • <b>Rostrum.X</b>: The distance in X between the rostrum and the bottom-left corner of the full picture (in % of total width (X) of the photo).
 
@@ -39,24 +39,24 @@ The metrics are calculated using multiple reference points placed by the user on
 whale.morpho(myimage, tiff)
 
 # Arguments 
-myimage: Path to the picture of the whale. The picture must be JPEG or TIFF format.
-tiff: Set to TRUE if the picture is a TIFF. Set to FALSE if the picture is a JPEG.
+<b>myimage:</b> Path to the picture of the whale. The picture must be JPEG or TIFF format.
+<b>tiff:</b> Set to TRUE if the picture is a TIFF. Set to FALSE if the picture is a JPEG.
 
 # Example
-<code>
-rm(list=ls()) # clear all the files in memory
-#load the packages required to run the whale.morpho function
-library(jpeg)
-library(tiff)
-library(raster)
-source("whale.morpho.R")
-#Run the function for a JPEG picture
-res <- whale.morpho(myimage = "C:/Whales/whale_picture.jpg", TIFF = FALSE)
-res
-#Run the function for a TIFF picture
-res <- whale.morpho(myimage = "C:/Whales/whale_picture.tif", TIFF = TRUE)
-res
-</code>
+
+rm(list=ls()) # clear all the files in memory<br>
+#load the packages required to run the whale.morpho function<br>
+library(jpeg)<br>
+library(tiff)<br>
+library(raster)<br>
+source("whale.morpho.R")<br>
+#Run the function for a JPEG picture<br>
+res <- whale.morpho(myimage = "C:/Whales/whale_picture.jpg", TIFF = FALSE)<br>
+res<br>
+#Run the function for a TIFF picture<br>
+res <- whale.morpho(myimage = "C:/Whales/whale_picture.tif", TIFF = TRUE)<br>
+res<br>
+</code><br>
 
 # Note
 When running your script, make sure not to run anything past the code line
