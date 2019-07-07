@@ -41,7 +41,7 @@ The metrics are calculated using multiple reference points placed by the user on
 whale.morpho(myimage, tiff)
 
 # Arguments 
-<b>myimage:</b> Path to the picture of the whale. The picture must be JPEG or TIFF format.
+<b>myimage:</b> Path to the picture of the whale. The picture must be JPEG or TIFF format.<br>
 <b>tiff:</b> Set to TRUE if the picture is a TIFF. Set to FALSE if the picture is a JPEG.
 
 # Example
