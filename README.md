@@ -11,6 +11,8 @@ The metrics are calculated using multiple reference points placed by the user on
 
 # List of extracted metrics:<br>
 
+Se the publication for full details on what we did with the metrics.
+
 • <b>Rostrum.X</b>: The distance in X between the rostrum and the bottom-left corner of the full picture (in % of total width (X) of the photo).
 
 • <b>Rostrum.Y</b>: The distance in Y between the rostrum and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
