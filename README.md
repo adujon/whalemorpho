@@ -7,9 +7,9 @@ Christiansen, F., Dujon, A.M., Sprogis, K.R., Arnould, J.P.Y., and Bejder, L. 20
 
 The metrics are calculated using multiple reference points placed by the user on the photograph of the body of the whale (Fig. S1).
 
-![alt text](https://imgur.com/cfeb85ad-4e3b-4cd1-9618-f7eea0f2d145)
+![alt text](https://imgur.com/a/6tyCpgx)
 
-# The list of extracted metrics is:<br>
+# List of extracted metrics:<br>
 
 • <b>Rostrum.X</b>: The distance in X between the rostrum and the bottom-left corner of the full picture (in % of total width (X) of the photo).
 
