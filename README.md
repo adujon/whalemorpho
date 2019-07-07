@@ -7,7 +7,7 @@ Christiansen, F., Dujon, A.M., Sprogis, K.R., Arnould, J.P.Y., and Bejder, L. 20
 
 The metrics are calculated using multiple reference points placed by the user on the photograph of the body of the whale (Fig. S1).
 
-<img>blob:https://imgur.com/cfeb85ad-4e3b-4cd1-9618-f7eea0f2d145</img>
+![alt text](https://imgur.com/cfeb85ad-4e3b-4cd1-9618-f7eea0f2d145)
 
 # The list of extracted metrics is:<br>
 
