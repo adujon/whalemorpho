@@ -8,6 +8,7 @@ Christiansen, F., Dujon, A.M., Sprogis, K.R., Arnould, J.P.Y., and Bejder, L. 20
 The metrics are calculated using multiple reference points placed by the user on the photograph of the body of the whale (Fig. S1).
 
 #The list of extracted metrics is:<br>
+
 • <b>Rostrum.X</b>: The distance in X between the rostrum and the bottom-left corner of the full picture (in % of total width (X) of the photo).
 
 • <b>Rostrum.Y</b>: The distance in Y between the rostrum and the bottom-left corner of the full picture (in % of total height (Y) of the photo).
@@ -44,7 +45,6 @@ tiff: Set to TRUE if the picture is a TIFF. Set to FALSE if the picture is a JPE
 # Example
 <code>
 rm(list=ls()) # clear all the files in memory
-  
 #load the packages required to run the whale.morpho function
 library(jpeg)
 library(tiff)
