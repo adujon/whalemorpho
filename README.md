@@ -51,7 +51,7 @@ rm(list=ls()) # clear all the files in memory<br>
 library(jpeg)<br>
 library(tiff)<br>
 library(raster)<br>
-source("whale.morpho.R")<br>
+source("whale_morpho.R")<br>
 #Run the function for a JPEG picture<br>
 res <- whale.morpho(myimage = "C:/Whales/whale_picture.jpg", TIFF = FALSE)<br>
 res<br>
