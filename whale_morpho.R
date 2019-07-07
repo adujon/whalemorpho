@@ -38,24 +38,24 @@ rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1])
 bcn <- 0 # Reset the bcn counter to zero (this counter is used during the validation of the points by the user) 
 while(bcn == 0){
   
-plot(x = 0, y = 0, type = 'n', xlim  = c(0,dim(pic)[2]), ylim  = c(0,dim(pic)[1]), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
-rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1])  
+  plot(x = 0, y = 0, type = 'n', xlim  = c(0,dim(pic)[2]), ylim  = c(0,dim(pic)[1]), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
+  rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1])  
+    
+  print('###### Click on the bottom left corner for zooming.')
+  flush.console()
+  bottom.left <- locator(n=1)
   
-print('###### Click on the bottom left corner for zooming.')
-flush.console()
-bottom.left <- locator(n=1)
-
-### Select the top right corner
-print('###### Click on the top right corner for zooming.')
-flush.console()
-top.right <- locator(n=1)
-
-### Replot the whale picture
-plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
-rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1])
-
-### Add a manual verification by the user
-bcn <- as.numeric(readline(prompt='###### Keep the zoomed area? Yes = 1 No = 0 : ')) 
+  ### Select the top right corner
+  print('###### Click on the top right corner for zooming.')
+  flush.console()
+  top.right <- locator(n=1)
+  
+  ### Replot the whale picture
+  plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
+  rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1])
+  
+  ### Add a manual verification by the user
+  bcn <- as.numeric(readline(prompt='###### Keep the zoomed area? Yes = 1 No = 0 : ')) 
 
 }
 
@@ -67,17 +67,17 @@ bcn <- as.numeric(readline(prompt='###### Keep the zoomed area? Yes = 1 No = 0 :
 bcn <- 0
 while(bcn == 0){
 
-plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
-rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
-
-print('###### Click on the tip of the rostrum.')
-flush.console()
-rostrum <- locator(n = 1)
-rostrum <- c(rostrum$x, rostrum$y)
-points(rostrum[1], rostrum[2], pch = 20)
-
-### Add a manual verification by the user
-bcn <- as.numeric(readline(prompt='###### Keep the rostrum location? Yes = 1 No = 0  : ')) 
+  plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
+  rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
+  
+  print('###### Click on the tip of the rostrum.')
+  flush.console()
+  rostrum <- locator(n = 1)
+  rostrum <- c(rostrum$x, rostrum$y)
+  points(rostrum[1], rostrum[2], pch = 20)
+  
+  ### Add a manual verification by the user
+  bcn <- as.numeric(readline(prompt='###### Keep the rostrum location? Yes = 1 No = 0  : ')) 
 
 }
 
@@ -88,19 +88,19 @@ bcn <- as.numeric(readline(prompt='###### Keep the rostrum location? Yes = 1 No 
 bcn <- 0
 while(bcn == 0){
   
-### Plot the whale 
-plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
-rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
-points(rostrum[1], rostrum[2], pch = 20)
+  ### Plot the whale 
+  plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
+  rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
+  points(rostrum[1], rostrum[2], pch = 20)
+    
+  print('###### Click on the notch of the tail fluke.')
+  flush.console()
+  tail<- locator(n = 1)
+  tail <- c(tail$x, tail$y)
+  points(tail[1], tail[2], pch = 20)
   
-print('###### Click on the notch of the tail fluke.')
-flush.console()
-tail<- locator(n = 1)
-tail <- c(tail$x, tail$y)
-points(tail[1], tail[2], pch = 20)
-
-### Add a manual verification by the user
-bcn <- as.numeric(readline(prompt='###### Keep the tail fluke location? Yes = 1 No = 0  : ')) 
+  ### Add a manual verification by the user
+  bcn <- as.numeric(readline(prompt='###### Keep the tail fluke location? Yes = 1 No = 0  : ')) 
 
 }
 
@@ -114,26 +114,26 @@ L <- sqrt((tail[1] - rostrum[1])^2 + (tail[2] - rostrum[2])^2)
 bcn <- 0
 while(bcn == 0){
   
-### Plot the whale 
-plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
-rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
-points(rostrum[1], rostrum[2], pch = 20)  
-points(tail[1], tail[2], pch = 20)
-
-print('###### Click on one of the two eyes')
-flush.console()
-eye1 <- locator(n = 1)
-points(eye1$x, eye1$y, pch = 20, col = 'blue')
-
-#### Create a perpendicular line ####
-
-seq.whale.x <- seq(rostrum[1], tail[1], 0.1 * sign(tail[1]-rostrum[1]))
-seq.whale.y <- seq(rostrum[2], tail[2], length.out = length(seq.whale.x))
-dist.eye<- sqrt((eye1$x - seq.whale.x)^2 + (eye1$y - seq.whale.y)^2)
-sel.min.eye <- which(dist.eye == min(dist.eye))
-
-### Add a manual verification by the user
-bcn <- as.numeric(readline(prompt='###### Keep the location of the first eye? Yes = 1 No = 0  : ')) 
+  ### Plot the whale 
+  plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
+  rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
+  points(rostrum[1], rostrum[2], pch = 20)  
+  points(tail[1], tail[2], pch = 20)
+  
+  print('###### Click on one of the two eyes')
+  flush.console()
+  eye1 <- locator(n = 1)
+  points(eye1$x, eye1$y, pch = 20, col = 'blue')
+  
+  #### Create a perpendicular line ####
+  
+  seq.whale.x <- seq(rostrum[1], tail[1], 0.1 * sign(tail[1]-rostrum[1]))
+  seq.whale.y <- seq(rostrum[2], tail[2], length.out = length(seq.whale.x))
+  dist.eye<- sqrt((eye1$x - seq.whale.x)^2 + (eye1$y - seq.whale.y)^2)
+  sel.min.eye <- which(dist.eye == min(dist.eye))
+  
+  ### Add a manual verification by the user
+  bcn <- as.numeric(readline(prompt='###### Keep the location of the first eye? Yes = 1 No = 0  : ')) 
 
 }
 
@@ -193,29 +193,29 @@ Weye <- sqrt((eye1$x - eye2$x)^2 + (eye1$y - eye2$y)^2)
 bcn <- 0
 while(bcn == 0){
 
-### Plot the whale 
-plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
-rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
-points(rostrum[1], rostrum[2], pch = 20)  
-points(tail[1], tail[2], pch = 20)
-points(eye2$x, eye2$y, pch = 20, col = 'blue')
-points(eye1$x, eye1$y, pch = 20, col = 'blue')
+  ### Plot the whale 
+  plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
+  rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
+  points(rostrum[1], rostrum[2], pch = 20)  
+  points(tail[1], tail[2], pch = 20)
+  points(eye2$x, eye2$y, pch = 20, col = 'blue')
+  points(eye1$x, eye1$y, pch = 20, col = 'blue')
+    
+  ### Locate the blowhole
+  print('###### Click on the blowhole.')
+  flush.console()
+  blowhole <- locator(n = 1)
   
-### Locate the blowhole
-print('###### Click on the blowhole.')
-flush.console()
-blowhole <- locator(n = 1)
-
-dist.blow<- sqrt((blowhole$x - seq.whale.x)^2 + (blowhole$y - seq.whale.y)^2)
-sel.min.blow <- which(dist.blow == min(dist.blow))
-
-### Intermediate step
-selbx <- seq.whale.x[sel.min.blow]
-selby <- seq.whale.y[sel.min.blow]
-points(selbx, selby, col = 'yellow', pch = 20)
-
-### Add a manual verification by the user
-bcn <- as.numeric(readline(prompt='###### Keep the blowhole location? Yes = 1 No = 0  : ')) 
+  dist.blow<- sqrt((blowhole$x - seq.whale.x)^2 + (blowhole$y - seq.whale.y)^2)
+  sel.min.blow <- which(dist.blow == min(dist.blow))
+  
+  ### Intermediate step
+  selbx <- seq.whale.x[sel.min.blow]
+  selby <- seq.whale.y[sel.min.blow]
+  points(selbx, selby, col = 'yellow', pch = 20)
+  
+  ### Add a manual verification by the user
+  bcn <- as.numeric(readline(prompt='###### Keep the blowhole location? Yes = 1 No = 0  : ')) 
 
 }
 
@@ -230,30 +230,30 @@ Lb <- sqrt((rostrum[1] - selbx)^2 + (rostrum[2] - sely)^2)
 bcn <- 0
 while(bcn == 0){
 
-### Plot the whale 
-plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
-rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
-points(rostrum[1], rostrum[2], pch = 20)  
-points(tail[1], tail[2], pch = 20)
-points(eye2$x, eye2$y, pch = 20, col = 'blue')
-points(eye1$x, eye1$y, pch = 20, col = 'blue')
-points(selbx, selby, col = 'yellow', pch = 20)
-
-### Locate the start of the dorsal fin
-print('###### Click on the start of the dorsal fin')
-flush.console()
-bfin <- locator(n = 1)
-
-dist.bfin<- sqrt((bfin$x - seq.whale.x)^2 + (bfin$y - seq.whale.y)^2)
-sel.min.bfin <- which(dist.bfin == min(dist.bfin))
-
-sel.bfin.x <- seq.whale.x[sel.min.bfin]
-sel.bfin.y <- seq.whale.y[sel.min.bfin]
-
-points(sel.bfin.x, sel.bfin.y, pch = 20, col = 'orange')
-
-### Add a manual verification by the user
-bcn <- as.numeric(readline(prompt='###### Keep the start of the dorsal fin? Yes = 1 No = 0  : ')) 
+  ### Plot the whale 
+  plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
+  rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
+  points(rostrum[1], rostrum[2], pch = 20)  
+  points(tail[1], tail[2], pch = 20)
+  points(eye2$x, eye2$y, pch = 20, col = 'blue')
+  points(eye1$x, eye1$y, pch = 20, col = 'blue')
+  points(selbx, selby, col = 'yellow', pch = 20)
+  
+  ### Locate the start of the dorsal fin
+  print('###### Click on the start of the dorsal fin')
+  flush.console()
+  bfin <- locator(n = 1)
+  
+  dist.bfin<- sqrt((bfin$x - seq.whale.x)^2 + (bfin$y - seq.whale.y)^2)
+  sel.min.bfin <- which(dist.bfin == min(dist.bfin))
+  
+  sel.bfin.x <- seq.whale.x[sel.min.bfin]
+  sel.bfin.y <- seq.whale.y[sel.min.bfin]
+  
+  points(sel.bfin.x, sel.bfin.y, pch = 20, col = 'orange')
+  
+  ### Add a manual verification by the user
+  bcn <- as.numeric(readline(prompt='###### Keep the start of the dorsal fin? Yes = 1 No = 0  : ')) 
 
 }
 
@@ -267,31 +267,31 @@ Ld1 <- sqrt((rostrum[1] - sel.bfin.x)^2 + ((rostrum[2] - sel.bfin.y)^2))
 bcn <- 0
 while(bcn == 0){
 
-### Plot the whale 
-plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
-rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
-points(rostrum[1], rostrum[2], pch = 20)  
-points(tail[1], tail[2], pch = 20)
-points(eye2$x, eye2$y, pch = 20, col = 'blue')
-points(eye1$x, eye1$y, pch = 20, col = 'blue')
-points(selbx, selby, col = 'yellow', pch = 20)  
-points(sel.bfin.x, sel.bfin.y, pch = 20, col = 'orange')
+  ### Plot the whale 
+  plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
+  rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
+  points(rostrum[1], rostrum[2], pch = 20)  
+  points(tail[1], tail[2], pch = 20)
+  points(eye2$x, eye2$y, pch = 20, col = 'blue')
+  points(eye1$x, eye1$y, pch = 20, col = 'blue')
+  points(selbx, selby, col = 'yellow', pch = 20)  
+  points(sel.bfin.x, sel.bfin.y, pch = 20, col = 'orange')
+    
+  ### Locate the end of the dorsal fin ######
+  print('###### Click on the end of the dorsal fin?')
+  flush.console()
+  efin <- locator(n = 1)
   
-### Locate the end of the dorsal fin ######
-print('###### Click on the end of the dorsal fin?')
-flush.console()
-efin <- locator(n = 1)
-
-dist.efin<- sqrt((efin$x - seq.whale.x)^2 + (efin$y - seq.whale.y)^2)
-sel.min.efin <- which(dist.efin == min(dist.efin))
-
-sel.efin.x <- seq.whale.x[sel.min.efin]
-sel.efin.y <- seq.whale.y[sel.min.efin]
-
-points(sel.efin.x, sel.efin.y, pch = 20, col = 'orange')
-
-### Add a manual verification by the user
-bcn <- as.numeric(readline(prompt='###### Keep the end of the dorsal fin? Yes = 1 No = 0  : ')) 
+  dist.efin<- sqrt((efin$x - seq.whale.x)^2 + (efin$y - seq.whale.y)^2)
+  sel.min.efin <- which(dist.efin == min(dist.efin))
+  
+  sel.efin.x <- seq.whale.x[sel.min.efin]
+  sel.efin.y <- seq.whale.y[sel.min.efin]
+  
+  points(sel.efin.x, sel.efin.y, pch = 20, col = 'orange')
+  
+  ### Add a manual verification by the user
+  bcn <- as.numeric(readline(prompt='###### Keep the end of the dorsal fin? Yes = 1 No = 0  : ')) 
 
 }
 
@@ -307,32 +307,32 @@ Ld2 <- sqrt((rostrum[1] - sel.efin.x)^2 + ((rostrum[2] - sel.efin.y)^2))
 bcn <- 0
 while(bcn == 0){
 
-### Plot the whale 
-plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
-rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
-points(rostrum[1], rostrum[2], pch = 20)  
-points(tail[1], tail[2], pch = 20)
-points(eye2$x, eye2$y, pch = 20, col = 'blue')
-points(eye1$x, eye1$y, pch = 20, col = 'blue')
-points(selbx, selby, col = 'yellow', pch = 20)  
-points(sel.bfin.x, sel.bfin.y, pch = 20, col = 'orange')  
-points(sel.efin.x, sel.efin.y, pch = 20, col = 'orange')  
+  ### Plot the whale 
+  plot(x = 0, y = 0, type = 'n', xlim  = c(bottom.left$x,top.right$x), ylim  = c(bottom.left$y,top.right$y), xlab = 'X (Pixels)', ylab = 'Y (Pixels)', asp =1)
+  rasterImage(pic, 0, 0, dim(pic)[2],dim(pic)[1]) 
+  points(rostrum[1], rostrum[2], pch = 20)  
+  points(tail[1], tail[2], pch = 20)
+  points(eye2$x, eye2$y, pch = 20, col = 'blue')
+  points(eye1$x, eye1$y, pch = 20, col = 'blue')
+  points(selbx, selby, col = 'yellow', pch = 20)  
+  points(sel.bfin.x, sel.bfin.y, pch = 20, col = 'orange')  
+  points(sel.efin.x, sel.efin.y, pch = 20, col = 'orange')  
+    
+  ### Locate the beginning of the tail fluke ######
+  print('###### Click on the beginning of the tail fluke')
+  flush.console()
+  stail <- locator(n = 1)
   
-### Locate the beginning of the tail fluke ######
-print('###### Click on the beginning of the tail fluke')
-flush.console()
-stail <- locator(n = 1)
-
-dist.stail<- sqrt((stail$x - seq.whale.x)^2 + (stail$y - seq.whale.y)^2)
-sel.min.stail <- which(dist.stail == min(dist.stail))
-
-sel.stail.x <- seq.whale.x[sel.min.stail]
-sel.stail.y <- seq.whale.y[sel.min.stail]
-
-points(sel.stail.x, sel.stail.y, pch = 20, col = 'green')
-
-### Add a manual verification by the user
-bcn <- as.numeric(readline(prompt='###### Keep the start of the tail fluke? Yes = 1 No = 0  : ')) 
+  dist.stail<- sqrt((stail$x - seq.whale.x)^2 + (stail$y - seq.whale.y)^2)
+  sel.min.stail <- which(dist.stail == min(dist.stail))
+  
+  sel.stail.x <- seq.whale.x[sel.min.stail]
+  sel.stail.y <- seq.whale.y[sel.min.stail]
+  
+  points(sel.stail.x, sel.stail.y, pch = 20, col = 'green')
+  
+  ### Add a manual verification by the user
+  bcn <- as.numeric(readline(prompt='###### Keep the start of the tail fluke? Yes = 1 No = 0  : ')) 
 
 }
 
